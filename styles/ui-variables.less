@@ -4,6 +4,8 @@ https://github.com/Foundry376/Mailspring/blob/master/app/static/style/base/ui-va
 */
 @import "base/ui-variables";
 
+@import 'base/ui-variables';
+
 @gray-base: #ffffff;
 @gray-darker: darken(@gray-base, 13.5%);
 @gray-dark: darken(@gray-base, 20%);
@@ -50,3 +52,47 @@ https://github.com/Foundry376/Mailspring/blob/master/app/static/style/base/ui-va
 
 @toolbar-background-color: #121212;
 @panel-background-color: #121212;
+
+.sheet-toolbar {
+  border-bottom: 1px solid @border-color-divider;
+  box-shadow: none;
+}
+
+.thread-icon:not(.thread-icon-unread):not(.thread-icon-star) {
+  filter: invert(100%);
+}
+img.content-dark {
+  filter: invert(100%);
+}
+img.content-light {
+  filter: invert(100%);
+}
+
+.mail-label {
+  filter: contrast(110%) brightness(85%);
+}
+
+#message-list .message-item-wrap .message-item-white-wrap {
+  box-shadow: 0 0 0.5px rgba(255, 255, 255, 0.28), 0 1px 1.5px rgba(255, 255, 255, 0.08);
+}
+
+.thread-list .list-item:not(.unread):not(.selected):not(.focused) {
+  color: #aaa;
+}
+
+.thread-list .list-item.thread-list-reminder-item {
+  background-color: #312856;
+
+  &.unread {
+    background-color: #312856;
+    &:not(.focused):not(.selected) {
+      background-color: #312856;
+    }
+  }
+}
+
+.send-reminders-header {
+  color: #7d5bef;
+  background: #312856;
+  border-bottom: 1px solid #4d3b8a;
+}
